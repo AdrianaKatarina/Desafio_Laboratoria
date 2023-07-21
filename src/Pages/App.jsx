@@ -1,9 +1,9 @@
 import './App.css';
 import { React, useEffect, useState } from "react";
-import data from './data/data.json';
-import Button from './Components/Button/Button';
-import Card from './Components/Card/Card';
-import Pagination from './Components/Pagination/Pagination';
+import data from '../data/data.json';
+import Button from '../Components/Button/Button';
+import Card from '../Components/Card/Card';
+import Pagination from '../Components/Pagination/Pagination';
 
 const App = () => {
   const [cardPerPage, setCardPerPage] = useState(5);
@@ -22,28 +22,26 @@ const App = () => {
   const handleClickLayoutChange = () => {
     setIsCardVertical(!isCardVertical);
   }
-  
-  const modelFormatting = (model, version) => {
-    const lowerCaseModel = model.toLowerCase();
-    const lowerCaseVersion = version.toLowerCase();
-    const separateModel = lowerCaseModel.split(' ');
-    const separateVersion = lowerCaseVersion.split(' ');
-    const newModel = [];
-    separateModel.forEach((letterModel) => {
-      separateVersion.forEach((letterVersion) => {
-        if(letterModel !== letterVersion){
-          newModel.push(letterModel);
-        }
-      });
-    });
-    const capitalFirstLetter = newModel.map((letter) => {
-      return letter[0].toUpperCase() + letter.substring(1);
-    });
-    const removeRepeats = new Set(capitalFirstLetter);
-    const transformToString = Array.from(removeRepeats).join(' ');    
-    return transformToString;
+ 
+  const modelFormatting = (vehicleModel, vehicleDadModel) => {
+    const vehicleArray = vehicleModel.toLocaleLowerCase().split(' ');
+    const dadModelArray = vehicleDadModel.toLocaleLowerCase().split(' ');
+    
+    if(dadModelArray.length > 1){
+      let vehicleModel = vehicleArray;
+      for(let dm = 0; dm < dadModelArray.length; dm++) {
+        const filterVehicleModel = vehicleModel.filter(v => v !== dadModelArray[dm]);
+        vehicleModel = filterVehicleModel;
+      }
+      const vehicleModelFormatted = vehicleModel.join(' ');
+      return vehicleModelFormatted[0].toUpperCase() + vehicleModelFormatted.substring(1);
+    } else {
+      let filterVehicleModel = vehicleArray.filter(v => v !== vehicleDadModel.toLocaleLowerCase());
+      filterVehicleModel = filterVehicleModel.join(' ');
+      return filterVehicleModel[0].toUpperCase() + filterVehicleModel.substring(1);
+    }
   }
-
+  
   return (
     <main className='Geral'>
       <section className='Filters'>
