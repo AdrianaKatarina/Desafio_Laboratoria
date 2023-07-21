@@ -1,0 +1,36 @@
+.Geral {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.Filters{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Select-quantity{
+  background-color: var(--white);
+  color: var(--pink);
+  width: auto;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .Filters{
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Filters{
+    font-size: 2.5rem;
+  }
+}

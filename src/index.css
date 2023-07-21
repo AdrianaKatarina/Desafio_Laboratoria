@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
+:root{
+  font-size: 62.5%;
+  --white: #ffffff;
+  --light-pink: #f8e1f9;;
+  --pink: #f12aaf;
+  --dark-pink: #8d1666;
+  --gray: #aaaaaa;
+}
+
+body {
+  background-color: var(--light-pink);
+  font-size: 1.6rem;
+  font-family: CerebriSans-Bold, -apple-system, system-ui, Roboto, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  button{
+    font-size: 1.5rem;
+  }
+}
