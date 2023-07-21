@@ -1,26 +1,26 @@
-.Position-cards{
+.position-cards{
   display: flex;
   flex-flow: wrap;
   gap: 1rem;
   justify-content: center;
 }
 
-.Vertical-card,
-.Horizontal-card{
+.vertical-card,
+.horizontal-card{
   background-color: var(--white);
   border-radius: 1rem;
   box-shadow: 0.3rem 0.3rem 1rem var(--gray);
   position: relative;
 }
 
-.Vertical-card {
+.vertical-card {
   display: grid;
   width: 40vw;
   padding: 0 0 0.5rem 0;
   font-size: 0.9rem;
 }
 
-.Horizontal-card {
+.horizontal-card {
   display: flex;
   flex-direction: row;
   width: 90vw;
@@ -29,17 +29,17 @@
   font-size: 1.2rem;
 }
 
-.Vertical-card .Photo-card{
+.vertical-card .photo-card{
   width: 40vw;
   border-radius: 1rem 1rem 0 0;
 }
 
-.Horizontal-card .Photo-card{
+.horizontal-card .photo-card{
   width: 45vw;
   border-radius: 1rem 0 0 1rem;
 }
 
-.City{
+.city{
   position: absolute;
   top: 0;
   left: 0;
@@ -54,22 +54,22 @@
   padding: 0.3rem;
 }
 
-.Position{
+.position{
   display: grid;
   width: 40vw;
   gap: 0.5rem;
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
-.Horizontal-card .Position{
+.horizontal-card .position{
   padding: 0 0 0.5rem 0;
 }
 
-.Brand{
+.brand{
   text-align: center;
 }
 
-.Elipse{
+.elipse{
   white-space: nowrap; 
   text-align: center;
   overflow: hidden;
@@ -77,50 +77,50 @@
   text-transform: capitalize;
 }
 
-.Price{
+.price{
   justify-self: center;
 }
 
-.Information{
+.information{
   text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
-  .Vertical-card,
-  .Horizontal-card,
-  .Select-quantity{
+  .vertical-card,
+  .horizontal-card,
+  .select-quantity{
     font-size: 1.8rem;
   }
 
-  .City{
+  .city{
     font-size: 1.2rem;
   }
 
-  .Brand{
+  .brand{
     text-align: center;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .Vertical-card,
-  .Vertical-card .Photo-card,
-  .Vertical-card .Position{
+  .vertical-card,
+  .vertical-card .photo-card,
+  .vertical-card .position{
     width: 22vw;
   }
 
-  .Horizontal-card{
+  .horizontal-card{
     width: 60vw;
   }
 
-  .Horizontal-card .Photo-card{
+  .horizontal-card .photo-card{
     width: 20vw;
   }
-  .Horizontal-card .Position,
-  .Horizontal-card .Elipse{
+  .horizontal-card .position,
+  .horizontal-card .elipse{
     width: 40vw;
   }
 
-  .Horizontal-card .Position{
+  .horizontal-card .position{
     grid-template-areas: 
     "marca marca"
     "modelo modelo"
@@ -129,67 +129,59 @@
     grid-auto-columns: 19vw 19vw;
   }
 
-  .Horizontal-card .Brand{
+  .horizontal-card .brand{
     grid-area: marca;
     justify-self: center;
   }
 
-  .Horizontal-card .Elipse{
+  .horizontal-card .elipse{
     grid-area: modelo;
     justify-self: start;
   }
 
-  .Horizontal-card .Price{
+  .horizontal-card .price{
     grid-area: preço;
     justify-self: start;
   }
 
-  .Horizontal-card .Information{
+  .horizontal-card .information{
     grid-area: info;
   }
 
-  .Horizontal-card .Financing{
+  .horizontal-card .financing{
     grid-area: financiamento;
   }
 
-  .Horizontal-card .Contact{
+  .horizontal-card .contact{
     grid-area: contato;
-  }
-
-  .City{
-    font-size: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .Vertical-card,
-  .Vertical-card .Photo-card,
-  .Vertical-card .Position{
+  .vertical-card,
+  .vertical-card .photo-card,
+  .vertical-card .position{
     width: 18vw;
   }
 
-  .Vertical-card .Elipse{
+  .vertical-card .elipse{
     width: 16vw;
   }
 
-  .Horizontal-card {
+  .horizontal-card {
     width: 50vw;
   }
 
-  .Horizontal-card .Photo-card{
+  .horizontal-card .photo-card{
     width: 12vw;
   }
 
-  .Horizontal-card .Position,
-  .Horizontal-card .Elipse{
+  .horizontal-card .position,
+  .horizontal-card .elipse{
     width: 36vw;
   }
 
-  .Horizontal-card .Position{
+  .horizontal-card .position{
     grid-auto-columns: 21vw 15vw;
-  }
-
-  .City{
-    font-size: 2rem;
   }
 }

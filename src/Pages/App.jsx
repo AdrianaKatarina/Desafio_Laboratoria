@@ -43,15 +43,15 @@ const App = () => {
   }
   
   return (
-    <main className='Geral'>
-      <section className='Filters'>
+    <main className='geral'>
+      <section className='filters'>
         <h5>Visualização:</h5>
-        <select className='Select-quantity' value={cardPerPage} onChange={(e) => setCardPerPage(Number(e.target.value))}>
+        <select className='select-quantity' value={cardPerPage} onChange={(e) => setCardPerPage(Number(e.target.value))}>
           {[5,10,20,50].map((value) => (
             <option key={value} value={value}>{`${value} por página`}</option>
           ))}
         </select>
-        <Button className='Btn-layout' onClick={handleClickLayoutChange} children={isCardVertical ? 'Horizontal' : 'Vertical'}/>
+        <Button className='btn-layout' onClick={handleClickLayoutChange} children={isCardVertical ? 'Horizontal' : 'Vertical'}/>
       </section>
       <Card 
         isCardVertical={isCardVertical}

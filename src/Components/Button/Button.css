@@ -1,4 +1,4 @@
-.Btn-layout{
+.btn-layout{
   background-color: var(--dark-pink);
   font-weight: bold;
   border: none;
@@ -9,13 +9,13 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0rem 8rem 4rem;
 }
 
-.Btn-layout:hover{
+.btn-layout:hover{
   background-color: var(--pink);
   color: var(--light-pink); 
 }
 
-.Btn-financing,
-.Btn-contact{
+.btn-financing,
+.btn-contact{
   font-weight: bold;
   border-style: solid;
   border-width: 0.15rem;
@@ -23,13 +23,13 @@
   border-radius: 0.5rem;
 }
 
-.Btn-financing{
+.btn-financing{
   background-color: var(--dark-pink);
   color: var(--white);
   border: none;
 }
 
-.Btn-contact{
+.btn-contact{
   background-color: var(--white);
   color: var(--dark-pink);
   border-style: solid;
@@ -37,15 +37,15 @@
   border-color: var(--dark-pink);
 }
 
-.Btn-financing:hover,
-.Btn-contact:hover{
+.btn-financing:hover,
+.btn-contact:hover{
   background-color: var(--pink);
   color: var(--white);
   border: none;
 }
 
-.Current-page,
-.Other-pages{
+.current-page,
+.other-pages{
   width: auto;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -53,7 +53,7 @@
   border-radius: 0.2rem;
 }
 
-.Current-page{
+.current-page{
   border: none;
   background-color: var(--white);
   color: var(--dark-pink);
@@ -62,28 +62,28 @@
   cursor: default;
 }
 
-.Other-pages{
+.other-pages{
   border: none;
   background-color: var(--dark-pink);
   color: var(--white);
 }
 
-.Other-pages:hover{
+.other-pages:hover{
   background-color: var(--pink);
   color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.25) 0rem 14rem 28rem;
 }
 
 @media only screen and (min-width: 600px) {
-  .Current-page,
-  .Other-pages{
+  .current-page,
+  .other-pages{
     font-size: 1.8rem;
     border-radius: 0.4rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .Btn-layout{
+  .btn-layout{
     font-size: 1.8rem;
   }
 }
