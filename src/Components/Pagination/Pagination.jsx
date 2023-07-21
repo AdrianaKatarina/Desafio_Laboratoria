@@ -9,7 +9,7 @@ const Pagination = ({
     <section>
       {Array.from(Array(numberOfPages), (_, i) => (
         <Button
-          className={i === currentPage ? 'Current-page': 'Other-pages' } 
+          className={i === currentPage ? 'current-page': 'other-pages' } 
           key={i} 
           value={i} 
           onClick={onClickCurrentPage} 
